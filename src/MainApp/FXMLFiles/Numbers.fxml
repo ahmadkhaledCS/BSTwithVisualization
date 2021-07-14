@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainApp.Controllers.Numbers">
+   <children>
+      <ScrollPane layoutY="194.0" prefHeight="526.0" prefWidth="1200.0">
+         <content>
+            <AnchorPane fx:id="pane" prefHeight="522.0" prefWidth="1200.0" />
+         </content></ScrollPane>
+      <GridPane hgap="20.0" layoutX="28.0" layoutY="12.0" prefHeight="156.0" prefWidth="237.0" vgap="20.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Button fx:id="add" mnemonicParsing="false" onAction="#add" prefHeight="98.0" prefWidth="169.0" text="Add" />
+            <Button fx:id="delete" mnemonicParsing="false" onAction="#delete" prefHeight="78.0" prefWidth="160.0" text="Delete" GridPane.rowIndex="1" />
+            <Button fx:id="clear" mnemonicParsing="false" onAction="#clear" prefHeight="100.0" prefWidth="184.0" text="Clear" GridPane.rowIndex="2" />
+            <TextField fx:id="addTextField" onAction="#add" GridPane.columnIndex="1">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="deleteTextField" onAction="#delete" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </TextField>
+            <Button mnemonicParsing="false" onAction="#switchToMenu" prefHeight="97.0" prefWidth="173.0" text="Menu" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+      <GridPane hgap="20.0" layoutX="399.0" layoutY="27.0" prefHeight="125.0" prefWidth="772.0" vgap="20.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="219.0" minWidth="10.0" prefWidth="185.9999755859375" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="474.400048828125" minWidth="10.0" prefWidth="453.60002441406255" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="417.59997558593756" minWidth="10.0" prefWidth="59.199951171875" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <TextField fx:id="preTextField" GridPane.columnIndex="1" />
+            <TextField fx:id="postTextField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="inTextField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label alignment="CENTER" prefHeight="29.0" prefWidth="218.0" text="Preorder (root-Left-right)">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="29.0" prefWidth="235.0" text="Postorder (Left-right-root)" GridPane.rowIndex="1">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="29.0" prefWidth="213.0" text="Inorder (Left, Root, Right)" GridPane.rowIndex="2">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Button fx:id="preButton" mnemonicParsing="false" onAction="#play" prefHeight="29.0" prefWidth="135.0" text="play" GridPane.columnIndex="2" />
+            <Button fx:id="postButton" mnemonicParsing="false" onAction="#play" prefHeight="29.0" prefWidth="121.0" text="play" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Button fx:id="inButton" mnemonicParsing="false" onAction="#play" prefHeight="29.0" prefWidth="150.0" text="play" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+   </children>
+</Pane>
